@@ -6,6 +6,7 @@ import {
   flushMicrotasks,
   TestBed,
   tick,
+  waitForAsync,
 } from "@angular/core/testing";
 import { CoursesModule } from "../courses.module";
 import { DebugElement } from "@angular/core";
@@ -109,5 +110,34 @@ describe("HomeComponent", () => {
     expect(cardTitles[0].nativeElement.textContent).toContain(
       "Angular Security Course"
     );
+  }));
+
+  it("should display advanced courses when tab clicked - waitForAsync()", waitForAsync(() => {
+    coursesService.findAllCourses.and.returnValue(of(setupCourses()));
+    fixture.detectChanges();
+
+    const tabs = el.queryAll(By.css(".mdc-tab"));
+    expect(tabs.length).toBe(2, "Expected to find 2 tabs.");
+
+    // el.nativeElement.click();
+    tabs[1].nativeElement.click();
+
+    // click(tabs[1]);
+    fixture.detectChanges();
+
+    fixture.whenStable().then(() => {
+      console.log("Called when stable.");
+      const cardTitles = el.queryAll(
+        By.css(".mat-mdc-tab-body-active .mat-mdc-card-title")
+      );
+      expect(cardTitles.length).toBeGreaterThan(
+        0,
+        "Could not find card titles"
+      );
+
+      expect(cardTitles[0].nativeElement.textContent).toContain(
+        "Angular Security Course"
+      );
+    });
   }));
 });
