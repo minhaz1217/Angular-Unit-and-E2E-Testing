@@ -66,6 +66,43 @@ To run the frontend part of our code, we will use the Angular CLI:
 The application is visible at port 4200: [http://localhost:4200](http://localhost:4200)
 
 
+# This is the output of `ng version` from the project folder. This is here only as a failsafe backup for later.
+```
+Your global Angular CLI version (15.0.4) is greater than your local version (15.0.2). The local Angular CLI version is used.
+
+To disable this warning use "ng config -g cli.warnings.versionMismatch false".
+
+     _                      _                 ____ _     ___
+    / \   _ __   __ _ _   _| | __ _ _ __     / ___| |   |_ _|
+   / △ \ | '_ \ / _` | | | | |/ _` | '__|   | |   | |    | |
+  / ___ \| | | | (_| | |_| | | (_| | |      | |___| |___ | |
+ /_/   \_\_| |_|\__, |\__,_|_|\__,_|_|       \____|_____|___|
+                |___/
+
+
+Angular CLI: 15.0.2
+Node: 18.12.1
+Package Manager: npm 8.19.2
+OS: win32 x64
+
+Angular: 15.0.2
+... animations, cli, common, compiler, compiler-cli, core, forms
+... language-service, platform-browser, platform-browser-dynamic
+... router
+
+Package                            Version
+------------------------------------------------------------    
+@angular-devkit/architect          0.1500.2
+@angular-devkit/build-angular      15.0.2
+@angular-devkit/core               15.0.2
+@angular-devkit/schematics         15.0.2
+@angular/cdk                       15.0.1
+@angular/material                  15.0.1
+@angular/material-moment-adapter   15.0.1
+@schematics/angular                15.0.2
+rxjs                               6.5.4
+typescript                         4.8.4
+```
 
 
 # Created By - [Minhazul Hayat Khan](https://github.com/minhaz1217)
