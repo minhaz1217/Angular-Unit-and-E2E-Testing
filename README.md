@@ -104,5 +104,4 @@ rxjs                               6.5.4
 typescript                         4.8.4
 ```
 
-
-# Made with ❤ By - [Minhazul Hayat Khan](https://github.com/minhaz1217)
+# Made with <span style="color:red;">❤</span> By - [Minhazul Hayat Khan](https://github.com/minhaz1217)
